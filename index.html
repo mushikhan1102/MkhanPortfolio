@@ -104,6 +104,38 @@
       text-align: center;
     }
 
+    .project-links {
+      margin-top: 15px;
+    }
+
+    .project-links a {
+      display: inline-block;
+      background: #2c3e50;
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-right: 8px;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .project-links a:hover {
+      background: #1abc9c;
+      transform: scale(1.03);
+    }
+
+    .experience-list {
+      background: #fff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .experience-list ul {
+      margin-top: 10px;
+    }
+
     footer {
       background: #2c3e50;
       color: #fff;
@@ -117,12 +149,13 @@
 
   <header>
     <h1>Muhammad Khan</h1>
-    <p>Information Technology | Cloud Security | Data Analytics | AI/ML</p>
+    <p>Information Technology | Business Intelligence | Data Analytics | Cloud Security | AI/ML</p>
   </header>
 
   <nav>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
+    <a href="#experience">BI Experience</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -130,10 +163,11 @@
   <section id="about">
   <h2>About Me</h2>
   <p>
-    I am an IT professional with expertise in data analytics, AI, and cloud security. 
-    Currently working at United Wholesale Mortgage as a Senior Underwriter, I integrate 
-    secure coding practices, DevSecOps awareness, and compliance-driven development 
-    with frameworks like GLBA, CFPB, NIST, SOC 2, and ISO 27001.
+    I am an IT professional with hands-on experience in business intelligence, data analytics, AI, and cloud security. 
+    I use tools such as Power BI, SQL, Python, Excel, and Tableau to clean data, validate accuracy, identify trends, 
+    and build dashboards that turn business questions into clear insights. Currently working at United Wholesale 
+    Mortgage as a Senior Underwriter, I combine analytical problem-solving with compliance-driven technology 
+    practices aligned with GLBA, CFPB, NIST, SOC 2, and ISO 27001.
   </p>
 
   <!-- Download Resume Button -->
@@ -145,6 +179,14 @@
   <section id="skills">
     <h2>Skills</h2>
     <div class="skills">
+      <div class="card">
+        <h3>Business Intelligence</h3>
+        <p>Power BI, Tableau, Dashboard Design, KPI Reporting, Data Storytelling, DAX Basics</p>
+      </div>
+      <div class="card">
+        <h3>Data Analytics</h3>
+        <p>SQL, Python, Excel, Google Sheets, Data Cleaning, Data Validation, Pivot Tables, Trend Analysis</p>
+      </div>
       <div class="card">
         <h3>Cloud & Security</h3>
         <p>Azure RBAC, Encryption, AWS S3, Compliance Policies</p>
@@ -165,9 +207,34 @@
     </div>
   </section>
 
+  <section id="experience">
+    <h2>BI & Data Analytics Experience</h2>
+    <div class="experience-list">
+      <h3>Data-Driven Decision Support</h3>
+      <p>
+        My analytics experience focuses on transforming raw data into reliable insights for business, quality assurance, 
+        and operational decision-making. I have worked with SQL and Python to validate datasets, identify inconsistencies, 
+        and support reporting accuracy across business workflows.
+      </p>
+      <ul>
+        <li>Built and reviewed dashboards to communicate KPIs, trends, and performance metrics.</li>
+        <li>Used SQL queries and Excel analysis to verify data accuracy and investigate exceptions.</li>
+        <li>Applied Python-based validation scripts to improve testing efficiency and support QA processes.</li>
+        <li>Created visual summaries that make complex data easier for stakeholders to understand.</li>
+      </ul>
+    </div>
+  </section>
+
   <section id="projects">
     <h2>Projects</h2>
     <div class="projects">
+      <div class="card">
+        <h3>HR Analytics Power BI Dashboard</h3>
+        <p>Developed an interactive Power BI dashboard to analyze HR metrics, employee trends, attrition insights, and workforce performance indicators for better business decision-making.</p>
+        <div class="project-links">
+          <a href="https://github.com/mushikhan1102/HR-Analytics-BI-Dashboard" target="_blank">View Project</a>
+        </div>
+      </div>
       <div class="card">
         <h3>AI & Autonomous Systems</h3>
         <p>Built a self-driving car simulation in Python + CARLA with AI-based decision-making.</p>
@@ -206,5 +273,6 @@
 
 </body>
 </html>
+
 
 
