@@ -1,278 +1,185 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Muhammad Khan | Portfolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
-      background: #f5f7fa;
-      color: #333;
-      line-height: 1.6;
-    }
-
-/* Resume Button */
-.resume-btn {
-  text-align: center;
-  margin-top: 25px;
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muhammad Khan | Data Analyst &amp; Business Intelligence</title>
+<meta name="description" content="Muhammad Khan’s data analytics portfolio. Explore Power BI dashboards, SQL reconciliation, Python automation, and operational reporting experience.">
+<link rel="canonical" href="https://mushikhan1102.github.io/MkhanPortfolio/">
+<style>
+:root {
+  color-scheme: light;
+  --ink: #13243a;
+  --muted: #435772;
+  --accent: #075850;
+  --line: #d6e2e9;
+  --light: #f3f8fa;
+  --navy: #10263d;
+  --mint: #a8f0d0;
 }
-
-.resume-btn a {
-  display: inline-block;
-  background: #1abc9c;
-  color: #fff;
-  padding: 12px 25px;
-  border-radius: 6px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background 0.3s ease, transform 0.2s ease;
+* { box-sizing: border-box; }
+body { margin: 0; color: var(--ink); background: #fff; font: 1rem/1.65 system-ui, sans-serif; }
+a { color: var(--accent); text-underline-offset: .22em; }
+a:focus-visible, summary:focus-visible { outline: 3px solid #dc7627; outline-offset: 4px; }
+h1, h2, h3, p { margin: 0; }
+h1, h2, h3 { line-height: 1.12; letter-spacing: -.035em; }
+h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1.5rem; }
+h3 { font-size: 1.35rem; }
+p + p { margin-top: .8rem; }
+.wrap { width: min(70rem, calc(100% - 2.5rem)); margin-inline: auto; }
+.skip { position: absolute; left: 1rem; top: -6rem; padding: .75rem; background: white; }
+.skip:focus { top: .5rem; }
+header { background: white; border-bottom: 1px solid var(--line); }
+.bar, nav, .actions { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1.25rem; }
+.bar { justify-content: space-between; padding-block: .85rem; }
+nav a, .brand { min-height: 2.75rem; display: inline-flex; align-items: center; text-decoration: none; font-weight: 650; }
+nav a:hover, .brand:hover { text-decoration: underline; }
+.brand { color: var(--ink); }
+.hero { background: radial-gradient(ellipse at right top, #214e5b, var(--navy) 65%); color: white; padding-block: clamp(3rem, 8vw, 6rem); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 2rem 4rem; align-items: center; }
+.eyebrow { font-size: .875rem; font-weight: 750; letter-spacing: .09em; text-transform: uppercase; color: var(--accent); }
+.hero .eyebrow { color: var(--mint); }
+h1 { font-size: clamp(2.9rem, 8vw, 6.2rem); margin: .4rem 0 .6rem; }
+.lead { font-size: clamp(1.05rem, 2vw, 1.25rem); color: #e0eef6; max-width: 36rem; }
+.actions { margin-top: 1.35rem; }
+.button { display: inline-flex; min-height: 2.85rem; align-items: center; padding: .55rem 1rem; border: 1px solid currentColor; border-radius: .5rem; font-weight: 700; text-decoration: none; }
+.button:hover { text-decoration: underline; }
+.hero .button { color: white; }
+.hero .primary { background: var(--mint); color: #12342e; border-color: var(--mint); }
+.stats { display: grid; gap: .75rem; margin: 0; }
+.stats div { display: grid; grid-template-columns: minmax(4.5rem, auto) 1fr; align-items: center; gap: 1rem; padding: 1rem; border: 1px solid #739199; border-radius: .65rem; background: #ffffff0a; }
+.stats dt { font-weight: 750; font-size: 1.8rem; color: var(--mint); line-height: 1; }
+.stats dd { margin: 0; color: #e0eef6; line-height: 1.4; }
+section { padding-block: clamp(2.7rem, 6vw, 5rem); }
+.tinted { background: var(--light); }
+.feature { padding: clamp(1.2rem, 4vw, 2.5rem); border: 1px solid var(--line); border-left: .35rem solid #18796d; border-radius: .7rem; background: var(--light); }
+.feature h3 { font-size: clamp(1.55rem, 3vw, 2.15rem); margin: .45rem 0 .65rem; }
+.feature p:not(.eyebrow) { max-width: 46rem; }
+.tags { display: flex; flex-wrap: wrap; padding: 0; gap: .45rem; list-style: none; margin: 1rem 0 0; }
+.tags li { padding: .2rem .65rem; border: 1px solid #b9d7d1; color: #174e48; background: #e7f4f0; border-radius: 1rem; font-size: .875rem; }
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 1rem; }
+.card { padding: 1.25rem; border: 1px solid var(--line); border-radius: .7rem; background: white; }
+.card p { margin-top: .55rem; }
+.role { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.9fr); gap: .75rem 2rem; padding-block: 1.35rem; border-top: 1px solid var(--line); }
+.meta { color: var(--muted); margin-top: .5rem; }
+.role ul { margin: 0; padding-left: 1.25rem; }
+.role li + li { margin-top: .4rem; }
+.education { margin-top: 2rem; }
+.education ul { padding-left: 1.25rem; margin-bottom: 0; }
+footer { background: var(--navy); color: white; }
+footer a { color: var(--mint); }
+footer h2 { margin-bottom: .7rem; }
+@media (max-width: 48rem) {
+  .hero-grid, .role { grid-template-columns: 1fr; }
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
-
-.resume-btn a:hover {
-  background: #16a085;
-  transform: scale(1.05);
+@media (max-width: 33rem) {
+  .grid { grid-template-columns: 1fr; }
+  .wrap { width: calc(100% - 2rem); }
+  nav { gap: 0 .85rem; }
 }
-
-    header {
-      background: #2c3e50;
-      color: #fff;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      margin-top: 10px;
-    }
-
-    nav {
-      background: #34495e;
-      display: flex;
-      justify-content: center;
-      padding: 10px;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      color: #1abc9c;
-    }
-
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #2c3e50;
-    }
-
-    .skills, .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
-    }
-
-    .card:hover {
-      transform: scale(1.03);
-    }
-
-    .contact {
-      text-align: center;
-    }
-
-    .project-links {
-      margin-top: 15px;
-    }
-
-    .project-links a {
-      display: inline-block;
-      background: #2c3e50;
-      color: #fff;
-      padding: 8px 14px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-right: 8px;
-      transition: background 0.3s ease, transform 0.2s ease;
-    }
-
-    .project-links a:hover {
-      background: #1abc9c;
-      transform: scale(1.03);
-    }
-
-    .experience-list {
-      background: #fff;
-      padding: 25px;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-
-    .experience-list ul {
-      margin-top: 10px;
-    }
-
-    footer {
-      background: #2c3e50;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-  </style>
+</style>
 </head>
 <body>
-
-  <header>
-    <h1>Muhammad Khan</h1>
-    <p>Information Technology | Business Intelligence | Data Analytics | Cloud Security | AI/ML</p>
-  </header>
-
-  <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#experience">BI Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section id="about">
-  <h2>About Me</h2>
-  <p>
-    I am an IT professional with hands-on experience in business intelligence, data analytics, AI, and cloud security. 
-    I use tools such as Power BI, SQL, Python, Excel, and Tableau to clean data, validate accuracy, identify trends, 
-    and build dashboards that turn business questions into clear insights. Currently working at United Wholesale 
-    Mortgage as a Senior Underwriter, I combine analytical problem-solving with compliance-driven technology 
-    practices aligned with GLBA, CFPB, NIST, SOC 2, and ISO 27001.
-  </p>
-
-  <!-- Download Resume Button -->
-  <div class="resume-btn">
-    <a href="https://docs.google.com/document/d/1QcBpPICq2WfUnlfBFaiSyzYAjGKssQoSppJO1Cb1a_4/edit?tab=t.0" > View Resume</a>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#about">Muhammad Khan</a>
+    <nav aria-label="Primary">
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </div>
-</section>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills">
-      <div class="card">
-        <h3>Business Intelligence</h3>
-        <p>Power BI, Tableau, Dashboard Design, KPI Reporting, Data Storytelling, DAX Basics</p>
+</header>
+<main id="main">
+  <section class="hero" id="about" aria-labelledby="name">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Data Analytics &amp; Business Intelligence</p>
+        <h1 id="name">Muhammad Khan</h1>
+        <p class="lead">I use SQL, Python, Excel, and Power BI to reconcile operational data, automate recurring checks, and build reports that help teams track performance.</p>
+        <p class="lead">Based in Farmington Hills, Michigan</p>
+        <div class="actions">
+          <a class="button primary" href="#projects">View projects</a>
+          <a class="button" href="#experience">View experience</a>
+        </div>
       </div>
-      <div class="card">
-        <h3>Data Analytics</h3>
-        <p>SQL, Python, Excel, Google Sheets, Data Cleaning, Data Validation, Pivot Tables, Trend Analysis</p>
-      </div>
-      <div class="card">
-        <h3>Cloud & Security</h3>
-        <p>Azure RBAC, Encryption, AWS S3, Compliance Policies</p>
-      </div>
-      <div class="card">
-        <h3>Development</h3>
-        <p>Python, Java, C++, R, JavaScript, React.js, Node.js, Flutter, SQL, MongoDB, AWS S3, Google Firebase</p>
-      </div>
-
-      <div class="card">
-        <h3>Compliance & GRC</h3>
-        <p>NIST, SOC 2, ISO 27001, GLBA, HIPAA</p>
-      </div>
-      <div class="card">
-        <h3>Soft Skills</h3>
-        <p>Communication, Troubleshooting, Confidentiality, Leadership</p>
-      </div>
+      <dl class="stats" aria-label="Career highlights">
+        <div><dt>2+ years</dt><dd>Data analysis and reporting experience</dd></div>
+        <div><dt>20%</dt><dd>Improvement in data-validation efficiency through Python automation</dd></div>
+        <div><dt>10%</dt><dd>Reduction in recurring data inconsistencies after automating checks for duplicate records</dd></div>
+      </dl>
     </div>
   </section>
-
-  <section id="experience">
-    <h2>BI & Data Analytics Experience</h2>
-    <div class="experience-list">
-      <h3>Data-Driven Decision Support</h3>
-      <p>
-        My analytics experience focuses on transforming raw data into reliable insights for business, quality assurance, 
-        and operational decision-making. I have worked with SQL and Python to validate datasets, identify inconsistencies, 
-        and support reporting accuracy across business workflows.
-      </p>
+  <section id="projects" class="wrap" aria-labelledby="projects-title">
+    <h2 id="projects-title">Selected projects</h2>
+    <article class="feature">
+      <p class="eyebrow">Featured project</p>
+      <h3>HR Analytics Power BI Dashboard</h3>
+      <p>Built an interactive dashboard from open-source HR data to track workforce KPIs, employee attrition, departmental performance, and hiring trends. Modeled relationships between datasets and wrote DAX measures for executive reporting.</p>
+      <ul class="tags"><li>Power BI</li><li>DAX</li><li>Data modeling</li><li>KPI reporting</li></ul>
+      <div class="actions"><a class="button" href="https://github.com/mushikhan1102/HR-Analytics-BI-Dashboard">View dashboard project on GitHub</a></div>
+    </article>
+    <div class="grid">
+      <article class="card"><h3>AI &amp; Autonomous Systems Testing</h3><p>Designed Python test scenarios and analyzed simulation outputs to evaluate system behavior and catch regressions.</p></article>
+      <article class="card"><h3>Secure Cloud Development</h3><p>Implemented encrypted file storage with Java and AWS S3 and used SQL-based tests to verify data integrity.</p></article>
+      <article class="card"><h3>Student-Faculty Social Platform</h3><p>Led development and QA for an academic collaboration platform, coordinating functional testing, regression testing, and defect tracking.</p></article>
+    </div>
+  </section>
+  <section id="experience" class="tinted" aria-labelledby="experience-title">
+    <div class="wrap">
+      <h2 id="experience-title">Experience</h2>
+      <article class="role">
+        <div><h3>Data Analyst <small>(Part-time)</small></h3><p class="meta">Aadhritech International<br>May 2024 – Present · Remote</p></div>
+        <ul>
+          <li>Wrote SQL queries to extract, transform, and reconcile operational data across business systems.</li>
+          <li>Automated recurring validation in Python and investigated duplicate sales and cost records. The work improved validation efficiency by 20% and reduced recurring data inconsistencies by 10%.</li>
+          <li>Gathered reporting requirements and supported data preparation, visualization, and introductory Power BI dashboard development for operational KPIs.</li>
+        </ul>
+      </article>
+      <article class="role">
+        <div><h3>Underwriter</h3><p class="meta">United Wholesale Mortgage<br>June 2024 – October 2026 · Pontiac, MI</p></div>
+        <ul>
+          <li>Analyzed borrower income and financial statements, and reconciled documents against system records using Excel.</li>
+          <li>Worked with operations, IT, and compliance teams to resolve discrepancies and identify improvements to automated workflows.</li>
+        </ul>
+      </article>
+      <article class="role">
+        <div><h3>Research Assistant</h3><p class="meta">Wayne State University Car Lab<br>August 2022 – January 2023 · Detroit, MI</p></div>
+        <ul><li>Validated research datasets and automated system outputs, investigated performance issues, and reported findings to technical and nontechnical audiences.</li></ul>
+      </article>
+    </div>
+  </section>
+  <section class="wrap" id="skills" aria-labelledby="skills-title">
+    <h2 id="skills-title">Skills &amp; education</h2>
+    <div class="grid">
+      <article class="card"><h3>Data analysis</h3><p>SQL, Python, Excel, data cleaning, reconciliation, and root cause analysis.</p></article>
+      <article class="card"><h3>Business intelligence</h3><p>Power BI, DAX, Power Query, data modeling, dashboard development, and KPI reporting.</p></article>
+      <article class="card"><h3>Reporting workflows</h3><p>Data validation, requirements gathering, ETL concepts, Git, Jira, and Agile/Scrum.</p></article>
+    </div>
+    <div class="education">
+      <h3>Education &amp; certification</h3>
       <ul>
-        <li>Built and reviewed dashboards to communicate KPIs, trends, and performance metrics.</li>
-        <li>Used SQL queries and Excel analysis to verify data accuracy and investigate exceptions.</li>
-        <li>Applied Python-based validation scripts to improve testing efficiency and support QA processes.</li>
-        <li>Created visual summaries that make complex data easier for stakeholders to understand.</li>
+        <li>M.S. in Computer Science, AI/ML &amp; Robotics concentration · Wayne State University, 2024</li>
+        <li>B.S. in Computer Science, departmental and university honors · Wayne State University, 2023</li>
+        <li>Google Data Analytics Professional Certificate · Coursera, 2026</li>
       </ul>
     </div>
   </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="card">
-        <h3>HR Analytics Power BI Dashboard</h3>
-        <p>Developed an interactive Power BI dashboard to analyze HR metrics, employee trends, attrition insights, and workforce performance indicators for better business decision-making.</p>
-        <div class="project-links">
-          <a href="https://github.com/mushikhan1102/HR-Analytics-BI-Dashboard" target="_blank">View Project</a>
-        </div>
-      </div>
-      <div class="card">
-        <h3>AI & Autonomous Systems</h3>
-        <p>Built a self-driving car simulation in Python + CARLA with AI-based decision-making.</p>
-      </div>
-      <div class="card">
-        <h3>Secure Cloud Development</h3>
-        <p>Encrypted file system in Java integrated with AWS S3 for secure storage.</p>
-      </div>
-      <div class="card">
-        <h3>Student-Faculty Social Platform</h3>
-        <p>Directed a cross-functional team to develop a web + mobile platform with chat, dashboards, and announcements.</p>
-      </div>
-      <div class="card">
-        <h3>Financial Advisor App</h3>
-        <p>Flutter-based mobile app with portfolio tracking, financial goals, and real-time advisor chat.</p>
-      </div>
+</main>
+<footer id="contact">
+  <section class="wrap" aria-labelledby="contact-title">
+    <h2 id="contact-title">Contact</h2>
+    <p>Interested in discussing a data analytics, BI, or reporting role? Let’s connect.</p>
+    <div class="actions">
+      <a class="button" href="mailto:mushikhan1102@gmail.com">Email Muhammad</a>
+      <a class="button" href="https://www.linkedin.com/in/muhammad-khan-2023/">LinkedIn</a>
+      <a class="button" href="https://github.com/mushikhan1102/">GitHub</a>
     </div>
   </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="contact">
-      <p>📍 Farmington Hills, MI</p>
-      <p>📞 (248) 445-1622</p>
-      <p>✉️ <a href="mailto:mushikhan1102@gmail.com">mushikhan1102@gmail.com</a></p>
-      <p>
-        🔗 <a href="https://www.linkedin.com/in/muhammad-khan-2023/" target="_blank">LinkedIn</a> | 
-        🔗 <a href="https://github.com/mushikhan1102/" target="_blank">GitHub</a>
-      </p>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Muhammad Khan | Portfolio</p>
-  </footer>
-
+</footer>
 </body>
 </html>
-
-
 
